@@ -1,0 +1,87 @@
+
+canvas {
+  display:block;
+  margin:20px;
+}
+
+
+
+.hourpointer {
+      position: relative;
+    top: -145px;
+    bottom: 0;
+    left: -10px;
+    /* right: 0; */
+  margin: auto;
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+}
+.hourpointer .hourpointer_center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;   
+ -webkit-animation: rotate-hour 43200s linear infinite;
+ -moz-animation: rotate-hour 43200s linear infinite;
+}
+.hourpointer .hourpointer_center:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  width: 8px;
+  height: 0px;
+  background-color: #0072bb;
+  -webkit-border-radius: 8px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 8px;
+  -moz-background-clip: padding;
+  border-radius: 8px;
+  background-clip: padding-box;
+  -webkit-transform-origin: center 180px;
+  -moz-transform-origin: center 180px;
+  -ms-transform-origin: center 180px;
+  -o-transform-origin: center 180px;
+  transform-origin: center 180px;
+  -webkit-animation: second-grow 1.6s cubic-bezier(1, 0, 0, 1) 1.45s 1 forwards, second 60s normal infinite steps(60, end) 3s;
+  -moz-animation: second-grow 1.6s cubic-bezier(1, 0, 0, 1) 1.45s 1 forwards, second 60s normal infinite steps(60, end) 3s;
+  -o-animation: second-grow 1.6s cubic-bezier(1, 0, 0, 1) 1.45s 1 forwards, second 60s normal infinite steps(60, end) 3s;
+  animation: second-grow 1.6s cubic-bezier(1, 0, 0, 1) 1.45s 1 forwards, second 60s normal infinite steps(60, end) 3s;
+}
+.hourpointer .hourpointer_center:before lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes second-grow{ from { top: 0; height: 0; } 100%{ top: -40px; height: 140px; }}
+@-moz-keyframes second-grow{ from { top: 0; height: 0; } 100%{ top: -40px; height: 140px; }}
+@-o-keyframes second-grow{ from { top: 0; height: 0; } 100%{ top: -40px; height: 140px; }}
+@keyframes second-grow{ from { top: 0; height: 0; } 100%{ top: -40px; height: 140px; }}
+[not-existing] {
+  zoom: 1;
+}
+.hourpointer .hourpointer_center:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 32px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 32px;
+  -moz-background-clip: padding;
+  border-radius: 32px;
+  background-clip: padding-box;
+  background-color: #0072bb;
+}
